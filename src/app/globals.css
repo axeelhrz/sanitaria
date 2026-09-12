@@ -1,26 +1,361 @@
 @import "tailwindcss";
 
 :root {
+  --navy: #0a2342;
+  --navy-deep: #06182e;
+  --cobalt: #0066ff;
+  --cobalt-dark: #0052cc;
+  --sky-tint: #eaf2ff;
+  --mist: #f4f7f9;
+  --ink: #0a2342;
+  --muted: #6b7c8f;
+  --line: #d7e0ea;
+  --white: #ffffff;
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0a2342;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-navy: var(--navy);
+  --color-navy-deep: var(--navy-deep);
+  --color-cobalt: var(--cobalt);
+  --color-cobalt-dark: var(--cobalt-dark);
+  --color-sky-tint: var(--sky-tint);
+  --color-mist: var(--mist);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --font-sans: var(--font-sans);
+  --font-script: var(--font-script);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), "Segoe UI", sans-serif;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--cobalt) 25%, white);
+}
+
+a,
+button {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease,
+    opacity 0.2s ease;
+}
+
+.script {
+  font-family: var(--font-script), cursive;
+  font-weight: 600;
+}
+
+.container-page {
+  width: min(1240px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+@media (min-width: 640px) {
+  .container-page {
+    width: min(1240px, calc(100% - 2.5rem));
+  }
+}
+
+/* Tipografía fluida */
+.text-display {
+  font-size: clamp(1.75rem, 1.2rem + 2.4vw, 2.85rem);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+
+.text-section {
+  font-size: clamp(1.5rem, 1.15rem + 1.5vw, 2.25rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.btn-row > a,
+.btn-row > button {
+  flex: 1 1 auto;
+  min-width: min(100%, 160px);
+}
+
+@media (max-width: 479px) {
+  .btn-row > a,
+  .btn-row > button {
+    width: 100%;
+  }
+}
+
+/* —— Entradas —— */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-left {
+  from {
+    opacity: 0;
+    transform: translateX(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes soft-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes script-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) rotate(-2deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes hero-zoom {
+  from {
+    opacity: 0;
+    transform: scale(1.06);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-fade-up-delay {
+  animation: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
+}
+
+.animate-fade-up-delay-2 {
+  animation: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.24s both;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease both;
+}
+
+.animate-hero-image {
+  animation: hero-zoom 1.15s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-fade-left {
+  animation: fade-left 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+}
+
+.animate-float {
+  animation: soft-float 4.5s ease-in-out infinite;
+}
+
+.animate-script {
+  animation: script-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.45s both;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Botones */
+.btn-primary,
+.btn-navy,
+.btn-outline,
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  padding: 0.9rem 1.4rem;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.25s ease;
+}
+
+.btn-primary {
+  background: var(--cobalt);
+  color: white;
+  box-shadow: 0 8px 20px rgba(0, 102, 255, 0.22);
+}
+
+.btn-primary:hover {
+  background: var(--cobalt-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 102, 255, 0.3);
+}
+
+.btn-primary:active,
+.btn-navy:active,
+.btn-outline:active,
+.btn-whatsapp:active {
+  transform: translateY(0);
+}
+
+.btn-navy {
+  background: var(--navy);
+  color: white;
+}
+
+.btn-navy:hover {
+  background: var(--navy-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(10, 35, 66, 0.22);
+}
+
+.btn-outline {
+  background: white;
+  color: var(--navy);
+  border: 1.5px solid #c5d3e4;
+}
+
+.btn-outline:hover {
+  border-color: var(--cobalt);
+  background: var(--sky-tint);
+  transform: translateY(-2px);
+}
+
+.btn-whatsapp {
+  background: #1f9e57;
+  color: white;
+  box-shadow: 0 8px 20px rgba(31, 158, 87, 0.22);
+}
+
+.btn-whatsapp:hover {
+  background: #188a4a;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(31, 158, 87, 0.3);
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #8a97a8;
+}
+
+.section-label::before {
+  content: "";
+  width: 18px;
+  height: 1.5px;
+  background: #8a97a8;
+  transition: width 0.35s ease;
+}
+
+.reveal-in .section-label::before,
+.animate-fade-up .section-label::before {
+  width: 28px;
+}
+
+.mobile-cta-spacer {
+  padding-bottom: calc(5.75rem + env(safe-area-inset-bottom, 0px));
+}
+
+@media (min-width: 768px) {
+  .mobile-cta-spacer {
+    padding-bottom: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-fade-up,
+  .animate-fade-up-delay,
+  .animate-fade-up-delay-2,
+  .animate-fade-in,
+  .animate-hero-image,
+  .animate-fade-left,
+  .animate-float,
+  .animate-script {
+    animation: none !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  a,
+  button,
+  .btn-primary,
+  .btn-navy,
+  .btn-outline,
+  .btn-whatsapp {
+    transition: none;
+  }
 }
