@@ -56,7 +56,10 @@ export default function ContactoPage() {
               <span>
                 <span className="block text-sm text-muted">WhatsApp</span>
                 <span className="block text-2xl font-bold text-navy">
-                  Escribinos ahora
+                  Escribir por WhatsApp
+                </span>
+                <span className="mt-0.5 block text-sm text-muted">
+                  {site.phoneDisplay}
                 </span>
               </span>
             </a>
@@ -72,10 +75,11 @@ export default function ContactoPage() {
             <div className="rounded-[22px] border border-line p-5">
               <p className="flex items-center gap-2 font-bold text-navy">
                 <Icons name="pin" className="h-5 w-5 text-cobalt" />
-                Área de cobertura
+                Ubicación
               </p>
+              <p className="mt-2 text-sm text-muted">{site.address}</p>
               <p className="mt-2 text-sm text-muted">
-                Montevideo y alrededores. Algunos barrios:{" "}
+                Zona de servicio: Montevideo. Barrios frecuentes:{" "}
                 {zones.slice(0, 8).join(", ")}…
               </p>
               <ButtonLink href="/zonas" variant="outline" className="mt-4 !py-2.5 text-sm">
@@ -106,17 +110,17 @@ export default function ContactoPage() {
                   Mapa / zona de cobertura
                 </h2>
                 <p className="mt-3 text-muted">
-                  Atendemos en todo Montevideo. Al contactarnos confirmamos tu
-                  barrio y el tiempo estimado de llegada.
+                  {site.address}. Atendemos en Montevideo. Al contactarnos
+                  confirmamos tu barrio y el tiempo estimado de llegada.
                 </p>
                 <div className="mt-6 flex flex-wrap gap-3">
                   <ButtonLink href={telUrl()} variant="primary">
                     <Icons name="phone" className="h-4 w-4" />
-                    Llamar
+                    Llamar ahora
                   </ButtonLink>
                   <ButtonLink href={whatsappUrl()} variant="whatsapp">
                     <Icons name="whatsapp" className="h-4 w-4" />
-                    WhatsApp
+                    Escribir por WhatsApp
                   </ButtonLink>
                 </div>
               </div>

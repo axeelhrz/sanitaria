@@ -32,7 +32,7 @@ export function FinalCTA({
                 </ButtonLink>
                 <ButtonLink href={whatsappUrl()} variant="whatsapp">
                   <Icons name="whatsapp" className="h-4 w-4" />
-                  WhatsApp
+                  Escribir por WhatsApp
                 </ButtonLink>
               </div>
             </div>

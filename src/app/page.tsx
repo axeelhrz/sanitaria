@@ -26,15 +26,14 @@ export default function HomePage() {
         <div className="lg:hidden">
           <div className="px-4 pb-6 pt-8 sm:px-6 sm:pt-10">
             <p className="section-label animate-fade-up">
-              Plomería en Montevideo
+              {site.hoursShort} · {site.addressShort}
             </p>
             <h1 className="animate-fade-up text-display mt-3 text-[#0A2342]">
-              Soluciones rápidas y confiables para{" "}
-              <span className="text-[#0066FF]">tu hogar o empresa</span>
+              {site.name}
             </h1>
             <p className="animate-fade-up-delay mt-4 max-w-xl text-[15px] leading-relaxed text-[#6B7C8F] sm:text-base">
-              Plomería, desobstrucciones, instalaciones y mantenimiento.
-              Atendemos en todo Montevideo, los 365 días del año.
+              {site.tagline} Desobstrucciones, plomería y reformas de baños y
+              cocinas.
             </p>
             <div className="btn-row animate-fade-up-delay-2 mt-6">
               <ButtonLink href={telUrl()} variant="primary">
@@ -42,9 +41,9 @@ export default function HomePage() {
                 Llamar ahora
                 <Icons name="arrow" className="h-4 w-4" />
               </ButtonLink>
-              <ButtonLink href="/contacto" variant="outline">
-                <Icons name="calendar" className="h-4 w-4" />
-                Solicitar servicio
+              <ButtonLink href={whatsappUrl()} variant="whatsapp">
+                <Icons name="whatsapp" className="h-4 w-4" />
+                Escribir por WhatsApp
               </ButtonLink>
             </div>
 
@@ -111,15 +110,14 @@ export default function HomePage() {
           <div className="relative z-10 mx-auto flex min-h-[620px] max-w-[1240px] items-center px-8">
             <div className="max-w-[520px]">
               <p className="section-label animate-fade-up">
-                Plomería en Montevideo
+                {site.hoursShort} · {site.addressShort}
               </p>
               <h1 className="animate-fade-up text-display mt-4 text-[#0A2342]">
-                Soluciones rápidas y confiables para{" "}
-                <span className="text-[#0066FF]">tu hogar o empresa</span>
+                {site.name}
               </h1>
               <p className="animate-fade-up-delay mt-5 max-w-[440px] text-base leading-relaxed text-[#6B7C8F]">
-                Plomería, desobstrucciones, instalaciones y mantenimiento.
-                Atendemos en todo Montevideo, los 365 días del año.
+                {site.tagline} Desobstrucciones, plomería y reformas de baños y
+                cocinas.
               </p>
               <div className="animate-fade-up-delay-2 mt-8 flex flex-wrap gap-3">
                 <ButtonLink href={telUrl()} variant="primary">
@@ -127,9 +125,9 @@ export default function HomePage() {
                   Llamar ahora
                   <Icons name="arrow" className="h-4 w-4" />
                 </ButtonLink>
-                <ButtonLink href="/contacto" variant="outline">
-                  <Icons name="calendar" className="h-4 w-4" />
-                  Solicitar servicio
+                <ButtonLink href={whatsappUrl()} variant="whatsapp">
+                  <Icons name="whatsapp" className="h-4 w-4" />
+                  Escribir por WhatsApp
                 </ButtonLink>
               </div>
             </div>
@@ -267,12 +265,12 @@ export default function HomePage() {
                   ))}
                 </ul>
                 <ButtonLink
-                  href="/contacto"
-                  variant="navy"
+                  href={whatsappUrl()}
+                  variant="whatsapp"
                   className="mt-6 w-full !py-3 text-[14px]"
                 >
-                  Solicitar servicio
-                  <Icons name="arrow" className="h-4 w-4" />
+                  <Icons name="whatsapp" className="h-4 w-4" />
+                  Escribir por WhatsApp
                 </ButtonLink>
               </aside>
             </Reveal>
@@ -341,7 +339,7 @@ export default function HomePage() {
                   className="!px-5 !py-3.5 !text-base sm:!px-6 sm:!py-4"
                 >
                   <Icons name="phone" className="h-5 w-5" />
-                  {site.phoneDisplay}
+                  Llamar ahora
                 </ButtonLink>
                 <ButtonLink
                   href={whatsappUrl()}
@@ -349,7 +347,7 @@ export default function HomePage() {
                   className="!px-5 !py-3.5 !text-base sm:!px-6 sm:!py-4"
                 >
                   <Icons name="whatsapp" className="h-5 w-5" />
-                  WhatsApp
+                  Escribir por WhatsApp
                 </ButtonLink>
               </div>
             </div>
@@ -495,6 +493,10 @@ export default function HomePage() {
               <h2 className="text-section mt-3 text-navy">
                 Lo que dicen quienes ya nos llamaron
               </h2>
+              <p className="mt-3 text-[15px] text-muted">
+                {site.rating.toFixed(1)}/5 en Google · {site.reviewCount}{" "}
+                reseñas visibles
+              </p>
             </div>
           </Reveal>
           <div className="mt-8 grid gap-4 sm:mt-10 sm:gap-5 md:grid-cols-3">

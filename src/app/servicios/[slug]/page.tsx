@@ -56,7 +56,7 @@ export default async function ServiceDetailPage({ params }: Props) {
               </ButtonLink>
               <ButtonLink href={whatsappUrl(`Hola, necesito: ${service.title}`)} variant="whatsapp">
                 <Icons name="whatsapp" className="h-4 w-4" />
-                WhatsApp
+                Escribir por WhatsApp
               </ButtonLink>
             </div>
           </div>
@@ -102,9 +102,9 @@ export default async function ServiceDetailPage({ params }: Props) {
               <li>3. Diagnosticamos y te damos presupuesto claro.</li>
               <li>4. Resolvemos, limpiamos y garantizamos el trabajo.</li>
             </ol>
-            <ButtonLink href="/contacto" variant="primary" className="mt-8">
-              Solicitar servicio
-              <Icons name="arrow" className="h-4 w-4" />
+            <ButtonLink href={whatsappUrl(`Hola, necesito: ${service.title}`)} variant="whatsapp" className="mt-8">
+              <Icons name="whatsapp" className="h-4 w-4" />
+              Escribir por WhatsApp
             </ButtonLink>
           </div>
         </div>

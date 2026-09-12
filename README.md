@@ -1,18 +1,13 @@
-# Sanitario en Montevideo 24h
+# Sanitario en Montevideo
 
-Sitio web premium de plomería / sanitario para Montevideo, con arquitectura SEO por servicios.
+Sitio web de plomería y sanitaria en Montevideo.
 
-## Páginas
+## Datos de contacto
 
-- `/` — Landing principal
-- `/servicios` — Listado de servicios
-- `/servicios/[slug]` — Páginas individuales (fugas, desobstrucciones, calefones, etc.)
-- `/emergencias-24h` — Urgencias comerciales
-- `/nosotros` — Confianza y forma de trabajar
-- `/zonas` — Cobertura en Montevideo
-- `/contacto` — Teléfono, WhatsApp y formulario corto
-
-En mobile hay CTA fijo: **Llamar | WhatsApp**.
+- **Marca:** Sanitario en Montevideo
+- **Teléfono / WhatsApp:** 091 750 251
+- **Dirección:** Tacuarembó, 11200 Montevideo, Uruguay
+- **Horario:** Abierto 24 horas, todos los días
 
 ## Desarrollo
 
@@ -21,8 +16,4 @@ npm install
 npm run dev
 ```
 
-Abrí [http://localhost:3000](http://localhost:3000).
-
-## Datos editables
-
-Teléfono, WhatsApp, servicios, zonas y FAQ están en `src/lib/site.ts`.
+Datos editables en `src/lib/site.ts`.

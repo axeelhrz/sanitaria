@@ -5,15 +5,15 @@ import { Icons, LogoMark } from "./Icons";
 export function Footer() {
   return (
     <footer className="bg-navy-deep text-white">
-      <div className="container-page grid gap-10 py-12 sm:py-14 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr]">
+      <div className="container-page grid gap-10 py-12 sm:grid-cols-2 sm:py-14 lg:grid-cols-[1.3fr_1fr_1fr]">
         <div>
           <Link href="/" className="inline-flex items-center gap-2.5">
             <LogoMark />
             <span className="text-lg font-bold">{site.name}</span>
           </Link>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/70">
-            Plomería, desobstrucciones, instalaciones y mantenimiento en todo
-            Montevideo. Atención 24 horas para urgencias sanitarias.
+            {site.tagline} Desobstrucciones, plomería y reformas de baños y
+            cocinas. {site.hoursShort}.
           </p>
           <div className="mt-5 flex flex-wrap gap-3">
             <a
@@ -30,7 +30,7 @@ export function Footer() {
               className="inline-flex items-center gap-2 rounded-full bg-[#1f9e57] px-4 py-2 text-sm font-semibold hover:bg-[#188a4a]"
             >
               <Icons name="whatsapp" className="h-4 w-4" />
-              WhatsApp
+              Escribir por WhatsApp
             </a>
           </div>
         </div>
@@ -59,10 +59,10 @@ export function Footer() {
           </p>
           <ul className="mt-4 space-y-3 text-sm text-white/80">
             <li>{site.hours}</li>
-            <li>Montevideo, Uruguay</li>
+            <li>{site.address}</li>
             <li>
-              <a href={`mailto:${site.email}`} className="hover:text-white">
-                {site.email}
+              <a href={telUrl()} className="hover:text-white">
+                {site.phoneDisplay}
               </a>
             </li>
           </ul>
@@ -75,7 +75,9 @@ export function Footer() {
             © {new Date().getFullYear()} {site.name}. Todos los derechos
             reservados.
           </p>
-          <p>Servicio de plomería y sanitario en Montevideo.</p>
+          <p>
+            {site.rating.toFixed(1)}/5 · {site.reviewCount} reseñas en Google
+          </p>
         </div>
       </div>
     </footer>

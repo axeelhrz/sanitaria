@@ -27,16 +27,16 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: `${site.name} | Plomería y emergencias sanitarias`,
+    default: `${site.name} | Plomería y sanitaria 24h`,
     template: `%s | ${site.name}`,
   },
   description:
-    "Sanitario 24 horas en Montevideo. Plomería, desobstrucciones, calefones, instalaciones y mantenimiento. Llegamos a tu zona.",
-  metadataBase: new URL("https://sanitariomontevideo24h.com"),
+    "Sanitario en Montevideo. Plomería, desobstrucciones y reformas de baños y cocinas. Atención 24 horas.",
+  metadataBase: new URL("https://sanitarioenmontevideo.com"),
   openGraph: {
     title: site.name,
     description:
-      "Plomería y emergencias sanitarias 24h en Montevideo. Atención rápida, trabajo garantizado.",
+      "Soluciones sanitarias profesionales en Montevideo. Atención 24 horas todos los días.",
     locale: "es_UY",
     type: "website",
   },

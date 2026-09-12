@@ -4,13 +4,11 @@ import type { Service } from "@/lib/site";
 import { Icons } from "./Icons";
 
 const iconBySlug: Record<string, React.ComponentProps<typeof Icons>["name"]> = {
-  "reparacion-de-fugas": "wrench",
   desobstrucciones: "pipe",
-  "reparacion-de-calefones": "drop",
-  "instalaciones-sanitarias": "toilet",
-  "reparacion-de-cisternas": "toilet",
-  griferia: "faucet",
-  "mantenimiento-sanitario": "faucet",
+  "reforma-de-banos": "toilet",
+  "reforma-de-cocinas": "faucet",
+  "sanitaria-general": "wrench",
+  plomeria: "drop",
 };
 
 export function ServiceCard({

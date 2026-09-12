@@ -30,7 +30,7 @@ export default function EmergenciasPage() {
               className="!px-8 !py-5 !text-xl"
             >
               <Icons name="phone" className="h-6 w-6" />
-              {site.phoneDisplay}
+              Llamar ahora
             </ButtonLink>
             <ButtonLink
               href={whatsappUrl("Hola, tengo una urgencia sanitaria.")}
@@ -38,7 +38,7 @@ export default function EmergenciasPage() {
               className="!px-8 !py-5 !text-xl"
             >
               <Icons name="whatsapp" className="h-6 w-6" />
-              WhatsApp urgente
+              Escribir por WhatsApp
             </ButtonLink>
           </div>
           <p className="mt-5 text-sm text-white/55">{site.hours}</p>
@@ -134,7 +134,7 @@ export default function EmergenciasPage() {
             </ButtonLink>
             <ButtonLink href={whatsappUrl()} variant="whatsapp">
               <Icons name="whatsapp" className="h-4 w-4" />
-              WhatsApp
+              Escribir por WhatsApp
             </ButtonLink>
           </div>
         </div>

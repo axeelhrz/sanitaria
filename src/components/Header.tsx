@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { site, telUrl } from "@/lib/site";
+import { site, telUrl, whatsappUrl } from "@/lib/site";
 import { Icons, LogoMark } from "./Icons";
 import { ButtonLink } from "./ButtonLink";
 
@@ -53,10 +53,8 @@ export function Header() {
         >
           <LogoMark className="h-7 w-7 shrink-0 sm:h-8 sm:w-8" />
           <span className="truncate text-[13px] font-bold leading-tight text-[#0A2342] sm:text-[15px]">
-            <span className="sm:hidden">Sanitario MV 24h</span>
-            <span className="hidden sm:inline">
-              Sanitario en Montevideo 24h
-            </span>
+            <span className="sm:hidden">{site.shortName}</span>
+            <span className="hidden sm:inline">{site.name}</span>
           </span>
         </Link>
 
@@ -97,17 +95,17 @@ export function Header() {
                 {site.phoneDisplay}
               </span>
               <span className="block text-[11px] text-[#6B7C8F]">
-                Atención 24 horas
+                {site.hoursShort}
               </span>
             </span>
           </a>
           <ButtonLink
-            href="/contacto"
-            variant="navy"
-            className="!rounded-full !bg-[#0A2342] !px-4 !py-2.5 text-[13px] xl:!px-5 xl:text-[14px]"
+            href={whatsappUrl()}
+            variant="whatsapp"
+            className="!rounded-full !px-4 !py-2.5 text-[13px] xl:!px-5 xl:text-[14px]"
           >
-            Solicitar servicio
-            <Icons name="arrow" className="h-4 w-4" />
+            <Icons name="whatsapp" className="h-4 w-4" />
+            Escribir por WhatsApp
           </ButtonLink>
         </div>
 
@@ -154,8 +152,9 @@ export function Header() {
             >
               Llamar {site.phoneDisplay}
             </a>
-            <ButtonLink href="/contacto" variant="navy" className="w-full">
-              Solicitar servicio
+            <ButtonLink href={whatsappUrl()} variant="whatsapp" className="w-full">
+              <Icons name="whatsapp" className="h-4 w-4" />
+              Escribir por WhatsApp
             </ButtonLink>
           </div>
         </nav>

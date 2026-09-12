@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Icons } from "./Icons";
-import { whatsappUrl } from "@/lib/site";
+import { site, whatsappUrl } from "@/lib/site";
 
 export function ContactForm() {
   const [nombre, setNombre] = useState("");
@@ -61,7 +61,7 @@ export function ContactForm() {
             value={telefono}
             onChange={(e) => setTelefono(e.target.value)}
             className="rounded-xl border border-line bg-mist/60 px-4 py-3 outline-none transition focus:border-cobalt focus:bg-white"
-            placeholder="091 234 567"
+            placeholder={site.phoneDisplay}
           />
         </label>
       </div>
