@@ -54,7 +54,7 @@ export default function HomePage() {
 
           <div className="relative mx-4 mb-6 aspect-[16/11] overflow-hidden rounded-[22px] sm:mx-6 sm:aspect-[16/10]">
             <Image
-              src="/hero-plomero-hd.jpg"
+              src="/hero-raul-arrieta.jpg"
               alt="Técnico sanitario trabajando bajo la mesada"
               fill
               priority
@@ -74,7 +74,7 @@ export default function HomePage() {
         <div className="relative hidden min-h-[620px] lg:block">
           <div className="absolute inset-y-0 right-0 w-[66%] animate-hero-image">
             <Image
-              src="/hero-plomero-hd.jpg"
+              src="/hero-raul-arrieta.jpg"
               alt="Técnico sanitario trabajando bajo la mesada"
               fill
               priority
