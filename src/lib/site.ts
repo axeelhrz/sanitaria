@@ -1,18 +1,29 @@
 export const site = {
-  name: "Sanitario en Montevideo",
-  shortName: "Sanitario MV",
-  tagline: "Soluciones sanitarias profesionales en Montevideo.",
-  phoneDisplay: "091 750 251",
-  phoneTel: "+59891750251",
-  whatsapp: "59891750251",
-  whatsappMessage: "Hola, necesito un sanitario en Montevideo.",
+  name: "Sanitario Raul Arrieta",
+  shortName: "Raul Arrieta",
+  tagline: "Soluciones sanitarias hechas como corresponde.",
+  description:
+    "Servicio de sanitaria profesional en Montevideo. Atención personalizada, trabajo responsable y soluciones para tu hogar o empresa.",
+  phoneDisplay: "095 297 686",
+  phoneTel: "+59895297686",
+  whatsapp: "59895297686",
+  whatsappMessage: "Hola, quiero solicitar un servicio de sanitaria.",
   city: "Montevideo",
-  address: "Tacuarembó, 11200 Montevideo, Uruguay",
-  addressShort: "Montevideo, Uruguay",
-  hours: "Abierto 24 horas, todos los días",
-  hoursShort: "Atención 24 horas",
-  rating: 4.0,
-  reviewCount: 11,
+  address: "Agrigento 2320, 11500 Montevideo",
+  addressShort: "Montevideo",
+  plusCode: "4WF8+J5 Montevideo",
+  hours: "Lun–Vie 08:00–17:00 · Sáb 08:00–12:00 · Dom cerrado",
+  hoursShort: "Lun–Vie 8–17",
+  hoursLines: [
+    "Lunes a viernes: 08:00 – 17:00",
+    "Sábado: 08:00 – 12:00",
+    "Domingo: Cerrado",
+  ],
+  rating: 5.0,
+  reviewCount: 5,
+  ratingLabel: "5,0 en Google",
+  ctaService: "Solicitar servicio",
+  ctaCall: "Llamar al 095 297 686",
 } as const;
 
 export function whatsappUrl(message: string = site.whatsappMessage) {
@@ -26,7 +37,7 @@ export function telUrl() {
 export const navLinks = [
   { href: "/", label: "Inicio" },
   { href: "/servicios", label: "Servicios" },
-  { href: "/emergencias-24h", label: "Emergencias 24h" },
+  { href: "/emergencias-24h", label: "Urgencias" },
   { href: "/nosotros", label: "Nosotros" },
   { href: "/zonas", label: "Zonas" },
   { href: "/contacto", label: "Contacto" },
@@ -50,9 +61,9 @@ export const services: Service[] = [
     title: "Desobstrucciones",
     shortTitle: "Desobstrucciones",
     description:
-      "Desobstruimos cañerías, cloacas, baños y cocinas con respuesta rápida en Montevideo.",
+      "Desobstruimos cañerías, cloacas, baños y cocinas con trabajo prolijo en Montevideo.",
     longDescription:
-      "Si el agua no baja, hay mal olor o reflujo, actuamos de inmediato. Realizamos desobstrucciones de inodoros, lavamanos, duchas, cocinas y columnas, con diagnóstico claro y solución duradera en todo Montevideo.",
+      "Si el agua no baja, hay mal olor o reflujo, lo resolvemos con diagnóstico claro. Realizamos desobstrucciones de inodoros, lavamanos, duchas, cocinas y columnas, con una solución duradera.",
     image: "/servicio-desobstruccion.jpg",
     problems: [
       "Inodoro tapado o con reflujo",
@@ -60,9 +71,9 @@ export const services: Service[] = [
       "Ducha o bañera obstruida",
       "Malos olores por cloaca",
     ],
-    seoTitle: "Desobstrucción de cañerías en Montevideo 24h",
+    seoTitle: "Desobstrucción de cañerías en Montevideo",
     seoDescription:
-      "Desobstrucción de cañerías, cloacas y sanitarios en Montevideo. Atención inmediata las 24 horas.",
+      "Desobstrucción de cañerías, cloacas y sanitarios en Montevideo. Servicio profesional de Sanitario Raul Arrieta.",
   },
   {
     slug: "reforma-de-banos",
@@ -81,7 +92,7 @@ export const services: Service[] = [
     ],
     seoTitle: "Reforma de baños en Montevideo",
     seoDescription:
-      "Reforma e instalación sanitaria de baños en Montevideo. Trabajo profesional y atención 24h.",
+      "Reforma e instalación sanitaria de baños en Montevideo. Trabajo profesional y responsable.",
   },
   {
     slug: "reforma-de-cocinas",
@@ -100,7 +111,7 @@ export const services: Service[] = [
     ],
     seoTitle: "Reforma de cocinas en Montevideo",
     seoDescription:
-      "Reforma e instalación sanitaria de cocinas en Montevideo. Plomería profesional y atención 24h.",
+      "Reforma e instalación sanitaria de cocinas en Montevideo. Plomería profesional.",
   },
   {
     slug: "sanitaria-general",
@@ -109,17 +120,17 @@ export const services: Service[] = [
     description:
       "Reparaciones e instalaciones sanitarias para el hogar o comercio en Montevideo.",
     longDescription:
-      "Atendemos trabajos de sanitaria general: reparaciones, instalaciones y urgencias. Te explicamos el problema, el presupuesto y las opciones antes de intervenir.",
+      "Atendemos trabajos de sanitaria general: reparaciones, instalaciones y urgencias en horario de atención. Te explicamos el problema, el presupuesto y las opciones antes de intervenir.",
     image: "/servicio-mantenimiento.jpg",
     problems: [
       "Reparaciones sanitarias varias",
       "Instalaciones nuevas",
-      "Urgencias en baño o cocina",
+      "Problemas en baño o cocina",
       "Diagnóstico de fallas",
     ],
     seoTitle: "Sanitaria general en Montevideo",
     seoDescription:
-      "Servicio de sanitaria general en Montevideo. Reparaciones, instalaciones y urgencias 24h.",
+      "Servicio de sanitaria general en Montevideo. Reparaciones e instalaciones con Sanitario Raul Arrieta.",
   },
   {
     slug: "plomeria",
@@ -128,7 +139,7 @@ export const services: Service[] = [
     description:
       "Plomería profesional: fugas, cañerías, grifería y mantenimiento en Montevideo.",
     longDescription:
-      "Servicio de plomería para hogares y comercios: detección y reparación de fugas, cambio de grifería, cañerías y soluciones de mantenimiento con atención las 24 horas.",
+      "Servicio de plomería para hogares y comercios: detección y reparación de fugas, cambio de grifería, cañerías y soluciones de mantenimiento con atención personalizada.",
     image: "/servicio-calefon.jpg",
     problems: [
       "Fugas y pérdidas de agua",
@@ -136,9 +147,9 @@ export const services: Service[] = [
       "Cañerías dañadas",
       "Mantenimiento preventivo",
     ],
-    seoTitle: "Plomería en Montevideo 24h",
+    seoTitle: "Plomería en Montevideo",
     seoDescription:
-      "Plomería en Montevideo: fugas, cañerías y grifería. Atención 24 horas todos los días.",
+      "Plomería en Montevideo: fugas, cañerías y grifería. Atención personalizada y trabajo responsable.",
   },
 ];
 
@@ -173,12 +184,12 @@ export const zones = [
 
 export const faqs = [
   {
-    q: "¿Atienden emergencias de noche y feriados?",
-    a: "Sí. Estamos abiertos 24 horas, todos los días, incluyendo noches, fines de semana y feriados en Montevideo.",
+    q: "¿Cuál es el horario de atención?",
+    a: "Lunes a viernes de 08:00 a 17:00, sábados de 08:00 a 12:00. Domingos cerrado.",
   },
   {
     q: "¿En cuánto tiempo pueden llegar?",
-    a: "Depende de la zona y la demanda del momento, pero priorizamos urgencias y buscamos llegar lo antes posible. Al llamar te damos un tiempo estimado real.",
+    a: "Depende de la zona y la demanda del momento. Al llamar te damos un tiempo estimado real según disponibilidad.",
   },
   {
     q: "¿Dan presupuesto antes de empezar?",
@@ -190,7 +201,7 @@ export const faqs = [
   },
   {
     q: "¿Dónde están ubicados?",
-    a: `Atendemos en Montevideo. Nuestra referencia es ${site.address}.`,
+    a: `Estamos en ${site.address}. Código Plus: ${site.plusCode}. Atendemos en Montevideo.`,
   },
 ];
 
@@ -198,28 +209,28 @@ export const reviews = [
   {
     name: "Cliente en Montevideo",
     zone: "Montevideo",
-    text: "Buen trato y solución rápida para una urgencia sanitaria. Recomendables.",
+    text: "Buen trato y solución clara. Trabajo hecho como corresponde.",
   },
   {
     name: "Cliente en Montevideo",
     zone: "Montevideo",
-    text: "Desobstruyeron sin demoras y explicaron todo con claridad.",
+    text: "Atención personalizada y resultado prolijo. Recomendables.",
   },
   {
     name: "Cliente en Montevideo",
     zone: "Montevideo",
-    text: "Trabajo prolijo en el baño. Atención 24 horas cuando más se necesita.",
+    text: "Responsables y puntuales. Resolvieron el problema sin vueltas.",
   },
 ];
 
 export const workSteps = [
   {
     title: "Nos contactás",
-    text: "Por teléfono o WhatsApp contanos la urgencia y tu zona.",
+    text: "Por teléfono o WhatsApp contanos el problema y tu zona.",
   },
   {
     title: "Coordinamos la visita",
-    text: "Te confirmamos disponibilidad y tiempo estimado de llegada.",
+    text: "Te confirmamos disponibilidad dentro del horario de atención.",
   },
   {
     title: "Diagnosticamos",
@@ -233,15 +244,15 @@ export const workSteps = [
 
 export const whyUs = [
   {
-    title: "Respuesta 24h",
-    text: "Urgencias sanitarias de día, noche y feriados en Montevideo.",
+    title: "5,0 en Google",
+    text: "Clientes que confían en nuestro trabajo y nos recomiendan.",
   },
   {
     title: "Presupuesto transparente",
     text: "Sabés qué se va a hacer y cuánto cuesta antes de empezar.",
   },
   {
-    title: "Trabajo limpio",
+    title: "Trabajo responsable",
     text: "Cuidamos tu casa, dejamos el lugar ordenado y con garantía.",
   },
   {

@@ -8,7 +8,7 @@ import { telUrl, whatsappUrl, zones } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Zonas de servicio en Montevideo",
   description:
-    "Sanitario en Montevideo y barrios: Pocitos, Cordón, Malvín, Centro, Carrasco y más. Confirmá cobertura al instante.",
+    "Sanitario Raul Arrieta en Montevideo y barrios: Pocitos, Cordón, Malvín, Centro, Carrasco y más. Confirmá cobertura al instante.",
 };
 
 export default function ZonasPage() {

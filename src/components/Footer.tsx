@@ -12,8 +12,7 @@ export function Footer() {
             <span className="text-lg font-bold">{site.name}</span>
           </Link>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/70">
-            {site.tagline} Desobstrucciones, plomería y reformas de baños y
-            cocinas. {site.hoursShort}.
+            {site.description} {site.hoursShort}.
           </p>
           <div className="mt-5 flex flex-wrap gap-3">
             <a
@@ -30,7 +29,7 @@ export function Footer() {
               className="inline-flex items-center gap-2 rounded-full bg-[#1f9e57] px-4 py-2 text-sm font-semibold hover:bg-[#188a4a]"
             >
               <Icons name="whatsapp" className="h-4 w-4" />
-              Escribir por WhatsApp
+              Solicitar servicio
             </a>
           </div>
         </div>
@@ -60,6 +59,7 @@ export function Footer() {
           <ul className="mt-4 space-y-3 text-sm text-white/80">
             <li>{site.hours}</li>
             <li>{site.address}</li>
+            <li>{site.plusCode}</li>
             <li>
               <a href={telUrl()} className="hover:text-white">
                 {site.phoneDisplay}
@@ -76,7 +76,7 @@ export function Footer() {
             reservados.
           </p>
           <p>
-            {site.rating.toFixed(1)}/5 · {site.reviewCount} reseñas en Google
+            ★★★★★ {site.ratingLabel} · {site.reviewCount} opiniones
           </p>
         </div>
       </div>

@@ -6,8 +6,7 @@ import { site, telUrl, whatsappUrl, zones } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contacto",
-  description:
-    "Contactá al sanitario 24h en Montevideo: teléfono, WhatsApp y formulario corto. Atención inmediata.",
+  description: `Contactá a ${site.name}: teléfono ${site.phoneDisplay}, WhatsApp y formulario. ${site.address}.`,
 };
 
 export default function ContactoPage() {
@@ -17,11 +16,10 @@ export default function ContactoPage() {
         <div className="container-page py-14 md:py-16">
           <p className="section-label">Contacto</p>
           <h1 className="text-display mt-3 max-w-3xl text-navy">
-            Hablá con nosotros ahora
+            Hablá con nosotros
           </h1>
           <p className="mt-5 max-w-2xl text-[15px] text-muted sm:text-lg">
-            Teléfono, WhatsApp o un formulario corto. Ideal si tenés una
-            urgencia o querés coordinar una visita.
+            Teléfono, WhatsApp o un formulario corto para coordinar tu servicio.
           </p>
         </div>
       </section>
@@ -37,7 +35,7 @@ export default function ContactoPage() {
                 <Icons name="phone" className="h-5 w-5" />
               </span>
               <span>
-                <span className="block text-sm text-muted">Teléfono 24h</span>
+                <span className="block text-sm text-muted">Teléfono</span>
                 <span className="block text-2xl font-bold text-navy">
                   {site.phoneDisplay}
                 </span>
@@ -56,7 +54,7 @@ export default function ContactoPage() {
               <span>
                 <span className="block text-sm text-muted">WhatsApp</span>
                 <span className="block text-2xl font-bold text-navy">
-                  Escribir por WhatsApp
+                  {site.ctaService}
                 </span>
                 <span className="mt-0.5 block text-sm text-muted">
                   {site.phoneDisplay}
@@ -69,7 +67,11 @@ export default function ContactoPage() {
                 <Icons name="clock" className="h-5 w-5 text-cobalt" />
                 Horarios
               </p>
-              <p className="mt-2 text-muted">{site.hours}</p>
+              <ul className="mt-2 space-y-1 text-muted">
+                {site.hoursLines.map((line) => (
+                  <li key={line}>{line}</li>
+                ))}
+              </ul>
             </div>
 
             <div className="rounded-[22px] border border-line p-5">
@@ -78,6 +80,7 @@ export default function ContactoPage() {
                 Ubicación
               </p>
               <p className="mt-2 text-sm text-muted">{site.address}</p>
+              <p className="mt-1 text-sm text-muted">Plus Code: {site.plusCode}</p>
               <p className="mt-2 text-sm text-muted">
                 Zona de servicio: Montevideo. Barrios frecuentes:{" "}
                 {zones.slice(0, 8).join(", ")}…
@@ -114,13 +117,13 @@ export default function ContactoPage() {
                   confirmamos tu barrio y el tiempo estimado de llegada.
                 </p>
                 <div className="mt-6 flex flex-wrap gap-3">
-                  <ButtonLink href={telUrl()} variant="primary">
-                    <Icons name="phone" className="h-4 w-4" />
-                    Llamar ahora
-                  </ButtonLink>
                   <ButtonLink href={whatsappUrl()} variant="whatsapp">
                     <Icons name="whatsapp" className="h-4 w-4" />
-                    Escribir por WhatsApp
+                    {site.ctaService}
+                  </ButtonLink>
+                  <ButtonLink href={telUrl()} variant="primary">
+                    <Icons name="phone" className="h-4 w-4" />
+                    {site.ctaCall}
                   </ButtonLink>
                 </div>
               </div>
@@ -131,11 +134,9 @@ export default function ContactoPage() {
                       <Icons name="pin" className="h-6 w-6" />
                     </span>
                     <p className="mt-4 text-lg font-bold text-navy">
-                      Montevideo, Uruguay
+                      {site.addressShort}
                     </p>
-                    <p className="mt-1 text-sm text-muted">
-                      Cobertura amplia · Confirmación al instante
-                    </p>
+                    <p className="mt-1 text-sm text-muted">{site.plusCode}</p>
                   </div>
                 </div>
               </div>

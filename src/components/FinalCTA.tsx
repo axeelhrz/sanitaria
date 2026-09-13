@@ -1,11 +1,11 @@
 import { ButtonLink } from "./ButtonLink";
 import { Icons } from "./Icons";
 import { Reveal } from "./Reveal";
-import { telUrl, whatsappUrl } from "@/lib/site";
+import { site, telUrl, whatsappUrl } from "@/lib/site";
 
 export function FinalCTA({
-  title = "¿Necesitás un sanitario ahora?",
-  text = "Llamá o escribinos por WhatsApp y coordinamos la visita en minutos. Atención 24h en Montevideo.",
+  title = "¿Necesitás un sanitario?",
+  text = "Solicitá el servicio por WhatsApp o llamá y coordinamos la visita. Atención personalizada en Montevideo.",
 }: {
   title?: string;
   text?: string;
@@ -18,7 +18,7 @@ export function FinalCTA({
             <div className="absolute -right-16 -top-16 h-56 w-56 animate-float rounded-full bg-cobalt/30 blur-3xl" />
             <div className="absolute -bottom-20 left-10 h-48 w-48 rounded-full bg-white/10 blur-3xl" />
             <div className="relative max-w-2xl">
-              <p className="section-label !text-white/70">Contacto inmediato</p>
+              <p className="section-label !text-white/70">Contacto</p>
               <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">
                 {title}
               </h2>
@@ -26,13 +26,13 @@ export function FinalCTA({
                 {text}
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <ButtonLink href={telUrl()} variant="primary">
-                  <Icons name="phone" className="h-4 w-4" />
-                  Llamar ahora
-                </ButtonLink>
                 <ButtonLink href={whatsappUrl()} variant="whatsapp">
                   <Icons name="whatsapp" className="h-4 w-4" />
-                  Escribir por WhatsApp
+                  {site.ctaService}
+                </ButtonLink>
+                <ButtonLink href={telUrl()} variant="primary">
+                  <Icons name="phone" className="h-4 w-4" />
+                  {site.ctaCall}
                 </ButtonLink>
               </div>
             </div>

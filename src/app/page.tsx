@@ -25,46 +25,30 @@ export default function HomePage() {
         {/* Mobile / tablet: contenido arriba + foto abajo */}
         <div className="lg:hidden">
           <div className="px-4 pb-6 pt-8 sm:px-6 sm:pt-10">
-            <p className="section-label animate-fade-up">
-              {site.hoursShort} · {site.addressShort}
-            </p>
+            <p className="section-label animate-fade-up">{site.name}</p>
             <h1 className="animate-fade-up text-display mt-3 text-[#0A2342]">
-              {site.name}
+              {site.tagline}
             </h1>
             <p className="animate-fade-up-delay mt-4 max-w-xl text-[15px] leading-relaxed text-[#6B7C8F] sm:text-base">
-              {site.tagline} Desobstrucciones, plomería y reformas de baños y
-              cocinas.
+              {site.description}
             </p>
+            <div className="animate-fade-up-delay mt-5">
+              <p className="text-[15px] font-semibold text-[#0A2342]">
+                ★★★★★ {site.ratingLabel}
+              </p>
+              <p className="mt-1 text-[13px] text-[#6B7C8F]">
+                Clientes que confían en nuestro trabajo.
+              </p>
+            </div>
             <div className="btn-row animate-fade-up-delay-2 mt-6">
-              <ButtonLink href={telUrl()} variant="primary">
-                <Icons name="phone" className="h-4 w-4" />
-                Llamar ahora
-                <Icons name="arrow" className="h-4 w-4" />
-              </ButtonLink>
               <ButtonLink href={whatsappUrl()} variant="whatsapp">
                 <Icons name="whatsapp" className="h-4 w-4" />
-                Escribir por WhatsApp
+                {site.ctaService}
               </ButtonLink>
-            </div>
-
-            <div className="animate-fade-up-delay-2 mt-5 rounded-2xl border border-[#E6ECF2] bg-[#F4F7F9] p-3.5">
-              <div className="flex items-start gap-2.5">
-                <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white text-[#0066FF] shadow-sm">
-                  <Icons name="clock" className="h-4 w-4" />
-                </span>
-                <div>
-                  <p className="text-[13px] font-semibold leading-snug text-[#0A2342]">
-                    ¿Urgencia? Te llamamos en minutos.
-                  </p>
-                  <Link
-                    href="/emergencias-24h"
-                    className="mt-1.5 inline-flex items-center gap-1 text-[12px] font-semibold text-[#0066FF]"
-                  >
-                    Solicitar llamada
-                    <Icons name="arrow" className="h-3 w-3" />
-                  </Link>
-                </div>
-              </div>
+              <ButtonLink href={telUrl()} variant="primary">
+                <Icons name="phone" className="h-4 w-4" />
+                {site.ctaCall}
+              </ButtonLink>
             </div>
           </div>
 
@@ -109,48 +93,30 @@ export default function HomePage() {
 
           <div className="relative z-10 mx-auto flex min-h-[620px] max-w-[1240px] items-center px-8">
             <div className="max-w-[520px]">
-              <p className="section-label animate-fade-up">
-                {site.hoursShort} · {site.addressShort}
-              </p>
+              <p className="section-label animate-fade-up">{site.name}</p>
               <h1 className="animate-fade-up text-display mt-4 text-[#0A2342]">
-                {site.name}
+                {site.tagline}
               </h1>
               <p className="animate-fade-up-delay mt-5 max-w-[440px] text-base leading-relaxed text-[#6B7C8F]">
-                {site.tagline} Desobstrucciones, plomería y reformas de baños y
-                cocinas.
+                {site.description}
               </p>
+              <div className="animate-fade-up-delay mt-6">
+                <p className="text-base font-semibold text-[#0A2342]">
+                  ★★★★★ {site.ratingLabel}
+                </p>
+                <p className="mt-1 text-sm text-[#6B7C8F]">
+                  Clientes que confían en nuestro trabajo.
+                </p>
+              </div>
               <div className="animate-fade-up-delay-2 mt-8 flex flex-wrap gap-3">
-                <ButtonLink href={telUrl()} variant="primary">
-                  <Icons name="phone" className="h-4 w-4" />
-                  Llamar ahora
-                  <Icons name="arrow" className="h-4 w-4" />
-                </ButtonLink>
                 <ButtonLink href={whatsappUrl()} variant="whatsapp">
                   <Icons name="whatsapp" className="h-4 w-4" />
-                  Escribir por WhatsApp
+                  {site.ctaService}
                 </ButtonLink>
-              </div>
-            </div>
-          </div>
-
-          <div className="absolute right-8 top-8 z-20 max-w-[240px] animate-float">
-            <div className="rounded-2xl border border-white/80 bg-[#F4F7F9]/95 p-3.5 shadow-[0_12px_28px_rgba(10,35,66,0.14)] backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(10,35,66,0.16)]">
-              <div className="flex items-start gap-2.5">
-                <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white text-[#0066FF] shadow-sm">
-                  <Icons name="clock" className="h-4 w-4" />
-                </span>
-                <div>
-                  <p className="text-[13px] font-semibold leading-snug text-[#0A2342]">
-                    ¿Urgencia? Te llamamos en minutos.
-                  </p>
-                  <Link
-                    href="/emergencias-24h"
-                    className="mt-1.5 inline-flex items-center gap-1 text-[12px] font-semibold text-[#0066FF] transition hover:gap-1.5"
-                  >
-                    Solicitar llamada
-                    <Icons name="arrow" className="h-3 w-3" />
-                  </Link>
-                </div>
+                <ButtonLink href={telUrl()} variant="primary">
+                  <Icons name="phone" className="h-4 w-4" />
+                  {site.ctaCall}
+                </ButtonLink>
               </div>
             </div>
           </div>
@@ -166,9 +132,9 @@ export default function HomePage() {
           <div className="mx-auto grid max-w-[1240px] gap-4 px-4 py-5 sm:grid-cols-3 sm:gap-6 sm:px-6 sm:py-6 lg:px-8">
             {[
               {
-                icon: "bolt" as const,
-                title: "Emergencias 24h",
-                text: "Atención inmediata",
+                icon: "star" as const,
+                title: site.ratingLabel,
+                text: "Clientes que confían",
               },
               {
                 icon: "shield" as const,
@@ -248,7 +214,7 @@ export default function HomePage() {
                 </p>
                 <ul className="mt-4 space-y-2.5">
                   {[
-                    "Atención los 365 días del año",
+                    "Atención personalizada en horario comercial",
                     "Técnicos profesionales",
                     "Presupuesto sin compromiso",
                     "Pagos en efectivo, transferencia o tarjeta",
@@ -270,7 +236,7 @@ export default function HomePage() {
                   className="mt-6 w-full !py-3 text-[14px]"
                 >
                   <Icons name="whatsapp" className="h-4 w-4" />
-                  Escribir por WhatsApp
+                  {site.ctaService}
                 </ButtonLink>
               </aside>
             </Reveal>
@@ -323,31 +289,31 @@ export default function HomePage() {
         <div className="container-page grid items-center gap-8 py-12 sm:gap-10 sm:py-16 md:grid-cols-2 md:py-20">
           <Reveal>
             <div>
-              <p className="section-label">Emergencias 24h</p>
+              <p className="section-label">Urgencias</p>
               <h2 className="text-section mt-3 text-navy">
-                ¿Tenés una urgencia sanitaria? Vamos hasta tu ubicación.
+                ¿Tenés una urgencia sanitaria? Coordinamos la visita.
               </h2>
               <p className="mt-4 text-[15px] text-muted sm:text-base">
                 Pérdidas de agua, caños rotos, inodoros tapados o calefones
-                fuera de servicio: priorizamos emergencias y te damos un tiempo
-                estimado real al contactarnos.
+                fuera de servicio: contactanos en horario de atención y te
+                damos un tiempo estimado real.
               </p>
               <div className="btn-row mt-8">
-                <ButtonLink
-                  href={telUrl()}
-                  variant="primary"
-                  className="!px-5 !py-3.5 !text-base sm:!px-6 sm:!py-4"
-                >
-                  <Icons name="phone" className="h-5 w-5" />
-                  Llamar ahora
-                </ButtonLink>
                 <ButtonLink
                   href={whatsappUrl()}
                   variant="whatsapp"
                   className="!px-5 !py-3.5 !text-base sm:!px-6 sm:!py-4"
                 >
                   <Icons name="whatsapp" className="h-5 w-5" />
-                  Escribir por WhatsApp
+                  {site.ctaService}
+                </ButtonLink>
+                <ButtonLink
+                  href={telUrl()}
+                  variant="primary"
+                  className="!px-5 !py-3.5 !text-base sm:!px-6 sm:!py-4"
+                >
+                  <Icons name="phone" className="h-5 w-5" />
+                  {site.ctaCall}
                 </ButtonLink>
               </div>
             </div>
@@ -377,7 +343,7 @@ export default function HomePage() {
                 href="/emergencias-24h"
                 className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-white transition hover:gap-2"
               >
-                Cómo funciona el servicio 24h
+                Cómo funciona el servicio de urgencias
                 <Icons name="arrow" className="h-4 w-4" />
               </Link>
             </div>
@@ -449,7 +415,7 @@ export default function HomePage() {
               <div className="max-w-2xl">
                 <p className="section-label">Zonas de cobertura</p>
                 <h2 className="text-section mt-3 text-navy">
-                  Sanitario en Montevideo y alrededores
+                  Sanitario Raul Arrieta en Montevideo
                 </h2>
                 <p className="mt-4 text-[15px] text-muted sm:text-base">
                   Si tu barrio está en la lista o cerca, escribinos y
@@ -494,8 +460,7 @@ export default function HomePage() {
                 Lo que dicen quienes ya nos llamaron
               </h2>
               <p className="mt-3 text-[15px] text-muted">
-                {site.rating.toFixed(1)}/5 en Google · {site.reviewCount}{" "}
-                reseñas visibles
+                {site.ratingLabel} · {site.reviewCount} reseñas
               </p>
             </div>
           </Reveal>

@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { ButtonLink } from "@/components/ButtonLink";
 import { FinalCTA } from "@/components/FinalCTA";
 import { Icons } from "@/components/Icons";
-import { services, telUrl, whatsappUrl } from "@/lib/site";
+import { services, site, telUrl, whatsappUrl } from "@/lib/site";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -50,13 +50,13 @@ export default async function ServiceDetailPage({ params }: Props) {
               {service.longDescription}
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <ButtonLink href={telUrl()} variant="primary">
-                <Icons name="phone" className="h-4 w-4" />
-                Llamar ahora
-              </ButtonLink>
               <ButtonLink href={whatsappUrl(`Hola, necesito: ${service.title}`)} variant="whatsapp">
                 <Icons name="whatsapp" className="h-4 w-4" />
-                Escribir por WhatsApp
+                {site.ctaService}
+              </ButtonLink>
+              <ButtonLink href={telUrl()} variant="primary">
+                <Icons name="phone" className="h-4 w-4" />
+                {site.ctaCall}
               </ButtonLink>
             </div>
           </div>
@@ -104,7 +104,7 @@ export default async function ServiceDetailPage({ params }: Props) {
             </ol>
             <ButtonLink href={whatsappUrl(`Hola, necesito: ${service.title}`)} variant="whatsapp" className="mt-8">
               <Icons name="whatsapp" className="h-4 w-4" />
-              Escribir por WhatsApp
+              {site.ctaService}
             </ButtonLink>
           </div>
         </div>
@@ -132,7 +132,7 @@ export default async function ServiceDetailPage({ params }: Props) {
 
       <FinalCTA
         title={`Pedí ${service.shortTitle.toLowerCase()} ahora`}
-        text="Atención en Montevideo las 24 horas. Teléfono y WhatsApp disponibles."
+        text={`${site.description} ${site.hoursShort}.`}
       />
     </>
   );

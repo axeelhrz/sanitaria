@@ -10,7 +10,7 @@ import { ButtonLink } from "./ButtonLink";
 const links = [
   { href: "/", label: "Inicio" },
   { href: "/servicios", label: "Servicios" },
-  { href: "/emergencias-24h", label: "Emergencias 24h" },
+  { href: "/emergencias-24h", label: "Urgencias" },
   { href: "/nosotros", label: "Nosotros" },
   { href: "/contacto", label: "Contacto" },
 ] as const;
@@ -105,7 +105,7 @@ export function Header() {
             className="!rounded-full !px-4 !py-2.5 text-[13px] xl:!px-5 xl:text-[14px]"
           >
             <Icons name="whatsapp" className="h-4 w-4" />
-            Escribir por WhatsApp
+            Solicitar servicio
           </ButtonLink>
         </div>
 
@@ -150,11 +150,11 @@ export function Header() {
               href={telUrl()}
               className="rounded-xl bg-[#F4F7F9] px-3 py-3.5 text-center text-sm font-semibold text-[#0A2342]"
             >
-              Llamar {site.phoneDisplay}
+              {site.ctaCall}
             </a>
             <ButtonLink href={whatsappUrl()} variant="whatsapp" className="w-full">
               <Icons name="whatsapp" className="h-4 w-4" />
-              Escribir por WhatsApp
+              {site.ctaService}
             </ButtonLink>
           </div>
         </nav>

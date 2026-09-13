@@ -5,9 +5,8 @@ import { Icons } from "@/components/Icons";
 import { site, telUrl, whatsappUrl, zones } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Emergencias sanitarias 24 horas Montevideo",
-  description:
-    "¿Tenés una urgencia sanitaria? Vamos hasta tu ubicación. Sanitario 24h en Montevideo: pérdidas, desobstrucciones y más.",
+  title: "Urgencias sanitarias en Montevideo",
+  description: `¿Tenés una urgencia sanitaria? Contactá a ${site.name}. ${site.hours}.`,
 };
 
 export default function EmergenciasPage() {
@@ -15,30 +14,30 @@ export default function EmergenciasPage() {
     <>
       <section className="bg-navy text-white">
         <div className="container-page py-16 md:py-20">
-          <p className="section-label !text-white/60">Emergencias 24h</p>
+          <p className="section-label !text-white/60">Urgencias</p>
           <h1 className="text-display mt-3 max-w-3xl">
-            ¿Tenés una urgencia sanitaria? Vamos hasta tu ubicación.
+            ¿Tenés una urgencia sanitaria? Coordinamos la visita.
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-white/75">
-            Baño inundado, caño roto o cloaca tapada: no hace falta navegar cinco
-            pantallas. Llamá o escribinos y coordinamos de inmediato.
+            Baño inundado, caño roto o cloaca tapada: llamá o escribinos y
+            coordinamos dentro del horario de atención.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
-            <ButtonLink
-              href={telUrl()}
-              variant="primary"
-              className="!px-8 !py-5 !text-xl"
-            >
-              <Icons name="phone" className="h-6 w-6" />
-              Llamar ahora
-            </ButtonLink>
             <ButtonLink
               href={whatsappUrl("Hola, tengo una urgencia sanitaria.")}
               variant="whatsapp"
               className="!px-8 !py-5 !text-xl"
             >
               <Icons name="whatsapp" className="h-6 w-6" />
-              Escribir por WhatsApp
+              {site.ctaService}
+            </ButtonLink>
+            <ButtonLink
+              href={telUrl()}
+              variant="primary"
+              className="!px-8 !py-5 !text-xl"
+            >
+              <Icons name="phone" className="h-6 w-6" />
+              {site.ctaCall}
             </ButtonLink>
           </div>
           <p className="mt-5 text-sm text-white/55">{site.hours}</p>
@@ -87,7 +86,7 @@ export default function EmergenciasPage() {
                   },
                   {
                     t: "Te confirmamos llegada",
-                    d: "Te damos un tiempo estimado real según zona y demanda.",
+                    d: "Te damos un tiempo estimado real según zona y disponibilidad.",
                   },
                   {
                     t: "Diagnosticamos en el lugar",
@@ -128,21 +127,21 @@ export default function EmergenciasPage() {
             ))}
           </div>
           <div className="mt-10 flex flex-wrap gap-3">
-            <ButtonLink href={telUrl()} variant="primary">
-              <Icons name="phone" className="h-4 w-4" />
-              Llamar ahora
-            </ButtonLink>
             <ButtonLink href={whatsappUrl()} variant="whatsapp">
               <Icons name="whatsapp" className="h-4 w-4" />
-              Escribir por WhatsApp
+              {site.ctaService}
+            </ButtonLink>
+            <ButtonLink href={telUrl()} variant="primary">
+              <Icons name="phone" className="h-4 w-4" />
+              {site.ctaCall}
             </ButtonLink>
           </div>
         </div>
       </section>
 
       <FinalCTA
-        title="Urgencia ahora: hablá con nosotros"
-        text="Teléfono y WhatsApp disponibles las 24 horas en Montevideo."
+        title="Urgencia: hablá con nosotros"
+        text={`${site.hours}. Teléfono y WhatsApp disponibles en horario de atención.`}
       />
     </>
   );

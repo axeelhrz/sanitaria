@@ -70,7 +70,7 @@ export function ContactForm() {
         <Icons name="arrow" className="h-4 w-4" />
       </button>
       <p className="mt-3 text-center text-xs text-muted">
-        Respuesta rápida · Sin compromiso · Atención 24h
+        Respuesta rápida · Sin compromiso · {site.hoursShort}
       </p>
     </form>
   );

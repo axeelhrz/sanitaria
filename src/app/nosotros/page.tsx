@@ -7,7 +7,7 @@ import { whyUs } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Nosotros | Experiencia y confianza",
   description:
-    "Conocé quién está detrás del servicio sanitario 24h en Montevideo: experiencia, forma de trabajar, garantía y valores.",
+    "Conocé a Sanitario Raul Arrieta: experiencia, forma de trabajar, garantía y valores en Montevideo.",
 };
 
 export default function NosotrosPage() {
