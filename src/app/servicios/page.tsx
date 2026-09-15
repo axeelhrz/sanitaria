@@ -6,9 +6,9 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { services } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Servicios de plomería y sanitario",
+  title: "Servicios de reparaciones y reformas",
   description:
-    "Reparación de fugas, desobstrucciones, calefones, instalaciones sanitarias, cisternas, grifería y mantenimiento en Montevideo.",
+    "Sanitaria, electricidad, albañilería, pintura, impermeabilización y herrería en Montevideo. Reparaciones y servicios López.",
 };
 
 export default function ServiciosPage() {
@@ -18,11 +18,11 @@ export default function ServiciosPage() {
         <div className="container-page py-14 md:py-18">
           <p className="section-label">Servicios</p>
           <h1 className="text-display mt-3 max-w-3xl text-navy">
-            Todos los trabajos sanitarios que resolvemos en Montevideo
+            Reparaciones y reformas para tu hogar o empresa
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-muted">
-            Cada servicio tiene su propia página para que encuentres rápido la
-            solución que necesitás: urgencias, instalaciones o mantenimiento.
+            Sanitaria, electricidad, albañilería, pintura, impermeabilización y
+            herrería. Un solo equipo para coordinar lo que necesitás.
           </p>
         </div>
       </section>

@@ -7,7 +7,7 @@ import { whyUs } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Nosotros | Experiencia y confianza",
   description:
-    "Conocé a Sanitario Raul Arrieta: experiencia, forma de trabajar, garantía y valores en Montevideo.",
+    "Conocé a Reparaciones y servicios López: experiencia, forma de trabajar y valores en Montevideo.",
 };
 
 export default function NosotrosPage() {
@@ -18,13 +18,13 @@ export default function NosotrosPage() {
           <div>
             <p className="section-label">Nosotros</p>
             <h1 className="text-display mt-3 text-navy">
-              Trabajo serio, limpio y con la cara visible
+              Un solo equipo para lo que tu hogar necesita
             </h1>
             <p className="mt-5 text-lg leading-relaxed text-muted">
-              Somos un equipo de sanitario y plomería enfocado en resolver
-              problemas reales en Montevideo: urgencias, reparaciones e
-              instalaciones. Priorizamos puntualidad, transparencia en el
-              presupuesto y dejar tu casa como la encontramos — o mejor.
+              Somos una empresa de reparaciones, mantenimiento y reformas en
+              Montevideo. Trabajamos sanitaria, electricidad, albañilería,
+              pintura, impermeabilización y herrería, con presupuesto claro y
+              trabajo responsable.
             </p>
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-[28px]">

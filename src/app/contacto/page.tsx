@@ -16,10 +16,11 @@ export default function ContactoPage() {
         <div className="container-page py-14 md:py-16">
           <p className="section-label">Contacto</p>
           <h1 className="text-display mt-3 max-w-3xl text-navy">
-            Hablá con nosotros
+            Pedí tu presupuesto
           </h1>
           <p className="mt-5 max-w-2xl text-[15px] text-muted sm:text-lg">
-            Teléfono, WhatsApp o un formulario corto para coordinar tu servicio.
+            Teléfono, WhatsApp o un formulario corto para coordinar tu
+            reparación o reforma.
           </p>
         </div>
       </section>
@@ -80,7 +81,6 @@ export default function ContactoPage() {
                 Ubicación
               </p>
               <p className="mt-2 text-sm text-muted">{site.address}</p>
-              <p className="mt-1 text-sm text-muted">Plus Code: {site.plusCode}</p>
               <p className="mt-2 text-sm text-muted">
                 Zona de servicio: Montevideo. Barrios frecuentes:{" "}
                 {zones.slice(0, 8).join(", ")}…
@@ -136,7 +136,7 @@ export default function ContactoPage() {
                     <p className="mt-4 text-lg font-bold text-navy">
                       {site.addressShort}
                     </p>
-                    <p className="mt-1 text-sm text-muted">{site.plusCode}</p>
+                    <p className="mt-1 text-sm text-muted">{site.address}</p>
                   </div>
                 </div>
               </div>

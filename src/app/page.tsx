@@ -32,14 +32,6 @@ export default function HomePage() {
             <p className="animate-fade-up-delay mt-4 max-w-xl text-[15px] leading-relaxed text-[#6B7C8F] sm:text-base">
               {site.description}
             </p>
-            <div className="animate-fade-up-delay mt-5">
-              <p className="text-[15px] font-semibold text-[#0A2342]">
-                ★★★★★ {site.ratingLabel}
-              </p>
-              <p className="mt-1 text-[13px] text-[#6B7C8F]">
-                Clientes que confían en nuestro trabajo.
-              </p>
-            </div>
             <div className="btn-row animate-fade-up-delay-2 mt-6">
               <ButtonLink href={whatsappUrl()} variant="whatsapp">
                 <Icons name="whatsapp" className="h-4 w-4" />
@@ -55,7 +47,7 @@ export default function HomePage() {
           <div className="relative mx-4 mb-6 aspect-[16/11] overflow-hidden rounded-[22px] sm:mx-6 sm:aspect-[16/10]">
             <Image
               src="/hero-raul-arrieta.jpg"
-              alt="Técnico sanitario trabajando bajo la mesada"
+              alt="Equipo de reparaciones trabajando en el hogar"
               fill
               priority
               quality={95}
@@ -75,7 +67,7 @@ export default function HomePage() {
           <div className="absolute inset-y-0 right-0 w-[66%] animate-hero-image">
             <Image
               src="/hero-raul-arrieta.jpg"
-              alt="Técnico sanitario trabajando bajo la mesada"
+              alt="Equipo de reparaciones trabajando en el hogar"
               fill
               priority
               quality={95}
@@ -100,14 +92,6 @@ export default function HomePage() {
               <p className="animate-fade-up-delay mt-5 max-w-[440px] text-base leading-relaxed text-[#6B7C8F]">
                 {site.description}
               </p>
-              <div className="animate-fade-up-delay mt-6">
-                <p className="text-base font-semibold text-[#0A2342]">
-                  ★★★★★ {site.ratingLabel}
-                </p>
-                <p className="mt-1 text-sm text-[#6B7C8F]">
-                  Clientes que confían en nuestro trabajo.
-                </p>
-              </div>
               <div className="animate-fade-up-delay-2 mt-8 flex flex-wrap gap-3">
                 <ButtonLink href={whatsappUrl()} variant="whatsapp">
                   <Icons name="whatsapp" className="h-4 w-4" />
@@ -132,9 +116,9 @@ export default function HomePage() {
           <div className="mx-auto grid max-w-[1240px] gap-4 px-4 py-5 sm:grid-cols-3 sm:gap-6 sm:px-6 sm:py-6 lg:px-8">
             {[
               {
-                icon: "star" as const,
-                title: site.ratingLabel,
-                text: "Clientes que confían",
+                icon: "wrench" as const,
+                title: "Reparaciones integrales",
+                text: "Varios rubros, un equipo",
               },
               {
                 icon: "shield" as const,
@@ -173,11 +157,12 @@ export default function HomePage() {
               <div className="max-w-2xl">
                 <p className="section-label">Nuestros servicios</p>
                 <h2 className="text-section mt-3 text-[#0A2342]">
-                  Plomería integral, sin complicaciones
+                  Sanitaria · Electricidad · Albañilería · Pintura ·
+                  Impermeabilización · Herrería
                 </h2>
                 <p className="mt-3 max-w-xl text-[15px] text-[#6B7C8F]">
-                  Experiencia, herramientas profesionales y respuesta rápida
-                  para el hogar o tu empresa.
+                  Reparaciones, mantenimiento y reformas con un solo equipo
+                  para tu hogar o empresa.
                 </p>
               </div>
               <Link
@@ -191,7 +176,7 @@ export default function HomePage() {
           </Reveal>
 
           <div className="mt-8 grid items-stretch gap-4 xl:mt-9 xl:grid-cols-[minmax(0,1fr)_250px]">
-            <div className="grid gap-3.5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+            <div className="grid gap-3.5 sm:grid-cols-2 lg:grid-cols-3">
               {featuredServices.map((service, i) => (
                 <Reveal key={service.slug} delay={i * 70}>
                   <ServiceCard service={service} compact />
@@ -279,7 +264,7 @@ export default function HomePage() {
           </div>
           <Reveal delay={200}>
             <p className="script shrink-0 text-[1.45rem] leading-tight text-white/95 sm:text-[1.55rem] lg:max-w-[210px] lg:text-right">
-              Más que plomería, solucionamos tu día.
+              Más que un rubro: solucionamos tu hogar.
             </p>
           </Reveal>
         </div>
@@ -291,12 +276,12 @@ export default function HomePage() {
             <div>
               <p className="section-label">Urgencias</p>
               <h2 className="text-section mt-3 text-navy">
-                ¿Tenés una urgencia sanitaria? Coordinamos la visita.
+                ¿Tenés una reparación urgente? Coordinamos la visita.
               </h2>
               <p className="mt-4 text-[15px] text-muted sm:text-base">
-                Pérdidas de agua, caños rotos, inodoros tapados o calefones
-                fuera de servicio: contactanos en horario de atención y te
-                damos un tiempo estimado real.
+                Pérdidas de agua, fallas eléctricas, humedad o daños en el
+                hogar: contactanos en horario de atención y te damos un tiempo
+                estimado real.
               </p>
               <div className="btn-row mt-8">
                 <ButtonLink
@@ -324,9 +309,9 @@ export default function HomePage() {
               <ul className="mt-5 space-y-3">
                 {[
                   "Pérdida de agua o caño roto",
-                  "Inodoro o cloaca tapada",
-                  "Calefón que no funciona",
-                  "Inundación en baño o cocina",
+                  "Falla eléctrica en el hogar",
+                  "Humedad o filtraciones",
+                  "Reparaciones y reformas varias",
                 ].map((item) => (
                   <li
                     key={item}
@@ -415,7 +400,7 @@ export default function HomePage() {
               <div className="max-w-2xl">
                 <p className="section-label">Zonas de cobertura</p>
                 <h2 className="text-section mt-3 text-navy">
-                  Sanitario Raul Arrieta en Montevideo
+                  Reparaciones y servicios López en Montevideo
                 </h2>
                 <p className="mt-4 text-[15px] text-muted sm:text-base">
                   Si tu barrio está en la lista o cerca, escribinos y
@@ -460,7 +445,7 @@ export default function HomePage() {
                 Lo que dicen quienes ya nos llamaron
               </h2>
               <p className="mt-3 text-[15px] text-muted">
-                {site.ratingLabel} · {site.reviewCount} reseñas
+                Clientes de Montevideo que confían en nuestro trabajo.
               </p>
             </div>
           </Reveal>

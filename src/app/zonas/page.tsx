@@ -3,12 +3,11 @@ import Link from "next/link";
 import { ButtonLink } from "@/components/ButtonLink";
 import { FinalCTA } from "@/components/FinalCTA";
 import { Icons } from "@/components/Icons";
-import { telUrl, whatsappUrl, zones } from "@/lib/site";
+import { site, telUrl, whatsappUrl, zones } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Zonas de servicio en Montevideo",
-  description:
-    "Sanitario Raul Arrieta en Montevideo y barrios: Pocitos, Cordón, Malvín, Centro, Carrasco y más. Confirmá cobertura al instante.",
+  description: `${site.name} en Montevideo y barrios: Pocitos, Cordón, Malvín, Centro, Carrasco y más. Confirmá cobertura al instante.`,
 };
 
 export default function ZonasPage() {
@@ -26,13 +25,13 @@ export default function ZonasPage() {
             aledañas.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <ButtonLink href={telUrl()} variant="primary">
-              <Icons name="phone" className="h-4 w-4" />
-              Confirmar mi zona
-            </ButtonLink>
             <ButtonLink href={whatsappUrl("Hola, ¿llegan a mi zona?")} variant="whatsapp">
               <Icons name="whatsapp" className="h-4 w-4" />
-              Consultar por WhatsApp
+              {site.ctaService}
+            </ButtonLink>
+            <ButtonLink href={telUrl()} variant="primary">
+              <Icons name="phone" className="h-4 w-4" />
+              {site.ctaCall}
             </ButtonLink>
           </div>
         </div>
@@ -60,12 +59,9 @@ export default function ZonasPage() {
               SEO local: páginas por barrio
             </h2>
             <p className="mt-3 max-w-3xl text-muted">
-              Más adelante se pueden sumar páginas específicas como{" "}
-              <span className="font-medium text-navy">/sanitario-pocitos</span>,{" "}
-              <span className="font-medium text-navy">/sanitario-cordon</span> o{" "}
-              <span className="font-medium text-navy">/sanitario-malvin</span>{" "}
-              solo para barrios con contenido propio y demanda real, evitando
-              páginas vacías o duplicadas.
+              Más adelante se pueden sumar páginas específicas por barrio con
+              contenido propio y demanda real, evitando páginas vacías o
+              duplicadas.
             </p>
             <Link
               href="/contacto"
@@ -79,7 +75,7 @@ export default function ZonasPage() {
       </section>
 
       <FinalCTA
-        title="¿Estás en Montevideo y necesitás un sanitario?"
+        title="¿Estás en Montevideo y necesitás una reparación?"
         text="Confirmamos cobertura y tiempo estimado apenas nos contactés."
       />
     </>

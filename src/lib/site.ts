@@ -1,29 +1,24 @@
 export const site = {
-  name: "Sanitario Raul Arrieta",
-  shortName: "Raul Arrieta",
-  tagline: "Soluciones sanitarias hechas como corresponde.",
+  name: "Reparaciones y servicios López",
+  shortName: "López",
+  tagline: "Todo lo que tu hogar necesita, en un solo equipo.",
   description:
-    "Servicio de sanitaria profesional en Montevideo. Atención personalizada, trabajo responsable y soluciones para tu hogar o empresa.",
-  phoneDisplay: "095 297 686",
-  phoneTel: "+59895297686",
-  whatsapp: "59895297686",
-  whatsappMessage: "Hola, quiero solicitar un servicio de sanitaria.",
+    "Reparaciones, mantenimiento y reformas en Montevideo. Soluciones profesionales en sanitaria, electricidad, albañilería y más.",
+  phoneDisplay: "099 493 321",
+  phoneTel: "+59899493321",
+  whatsapp: "59899493321",
+  whatsappMessage: "Hola, quiero solicitar un presupuesto.",
   city: "Montevideo",
-  address: "Agrigento 2320, 11500 Montevideo",
-  addressShort: "Montevideo",
-  plusCode: "4WF8+J5 Montevideo",
-  hours: "Lun–Vie 08:00–17:00 · Sáb 08:00–12:00 · Dom cerrado",
-  hoursShort: "Lun–Vie 8–17",
+  address: "Flammarión 5046, 11400 Montevideo",
+  addressShort: "Montevideo, Uruguay",
+  hours: "Lunes a viernes, 08:00–18:00",
+  hoursShort: "Lun–Vie 8–18",
   hoursLines: [
-    "Lunes a viernes: 08:00 – 17:00",
-    "Sábado: 08:00 – 12:00",
-    "Domingo: Cerrado",
+    "Lunes a viernes: 08:00 – 18:00",
+    "Sábado y domingo: Cerrado",
   ],
-  rating: 5.0,
-  reviewCount: 5,
-  ratingLabel: "5,0 en Google",
-  ctaService: "Solicitar servicio",
-  ctaCall: "Llamar al 095 297 686",
+  ctaService: "Solicitar presupuesto",
+  ctaCall: "Llamar ahora",
 } as const;
 
 export function whatsappUrl(message: string = site.whatsappMessage) {
@@ -57,99 +52,118 @@ export type Service = {
 
 export const services: Service[] = [
   {
-    slug: "desobstrucciones",
-    title: "Desobstrucciones",
-    shortTitle: "Desobstrucciones",
+    slug: "sanitaria",
+    title: "Sanitaria",
+    shortTitle: "Sanitaria",
     description:
-      "Desobstruimos cañerías, cloacas, baños y cocinas con trabajo prolijo en Montevideo.",
+      "Plomería y sanitaria: fugas, desobstrucciones, instalaciones y mantenimiento.",
     longDescription:
-      "Si el agua no baja, hay mal olor o reflujo, lo resolvemos con diagnóstico claro. Realizamos desobstrucciones de inodoros, lavamanos, duchas, cocinas y columnas, con una solución duradera.",
-    image: "/servicio-desobstruccion.jpg",
-    problems: [
-      "Inodoro tapado o con reflujo",
-      "Pileta de cocina que no baja",
-      "Ducha o bañera obstruida",
-      "Malos olores por cloaca",
-    ],
-    seoTitle: "Desobstrucción de cañerías en Montevideo",
-    seoDescription:
-      "Desobstrucción de cañerías, cloacas y sanitarios en Montevideo. Servicio profesional de Sanitario Raul Arrieta.",
-  },
-  {
-    slug: "reforma-de-banos",
-    title: "Reforma de baños",
-    shortTitle: "Reforma de baños",
-    description:
-      "Reformas e instalaciones sanitarias para baños: artefactos, grifería y terminaciones.",
-    longDescription:
-      "Renovamos e instalamos baños con trabajo prolijo: sanitarios, grifería, desagües y conexiones. Coordinamos la obra para que el resultado sea funcional, limpio y duradero.",
+      "Resolvemos problemas de sanitaria y plomería en el hogar o comercio: pérdidas de agua, desobstrucciones, cambio de grifería, instalaciones y mantenimiento. Trabajo prolijo y presupuesto claro antes de empezar.",
     image: "/servicio-sanitario.jpg",
     problems: [
-      "Cambio de inodoro, lavatorio o ducha",
-      "Renovación de cañerías del baño",
-      "Problemas de desagüe o humedad",
-      "Reforma parcial o completa del baño",
+      "Pérdidas de agua o caños rotos",
+      "Inodoro, pileta o cloaca tapada",
+      "Cambio de grifería o artefactos",
+      "Instalaciones sanitarias nuevas",
     ],
-    seoTitle: "Reforma de baños en Montevideo",
+    seoTitle: "Sanitaria y plomería en Montevideo",
     seoDescription:
-      "Reforma e instalación sanitaria de baños en Montevideo. Trabajo profesional y responsable.",
+      "Servicio de sanitaria y plomería en Montevideo. Reparaciones, instalaciones y mantenimiento con Reparaciones y servicios López.",
   },
   {
-    slug: "reforma-de-cocinas",
-    title: "Reforma de cocinas",
-    shortTitle: "Reforma de cocinas",
+    slug: "electricidad",
+    title: "Electricidad",
+    shortTitle: "Electricidad",
     description:
-      "Instalaciones y reformas sanitarias para cocinas: pileta, desagües y conexiones.",
+      "Instalaciones y reparaciones eléctricas para el hogar o comercio.",
     longDescription:
-      "Trabajamos la parte sanitaria de tu cocina: pileta, grifería, desagües y conexiones. Ideal para reformas, cambios de mesada o problemas de pérdidas y obstrucciones.",
-    image: "/servicio-fugas.jpg",
-    problems: [
-      "Cambio de pileta o grifería",
-      "Desagüe de cocina lento o tapado",
-      "Pérdidas debajo de la mesada",
-      "Conexiones para cocina nueva o reforma",
-    ],
-    seoTitle: "Reforma de cocinas en Montevideo",
-    seoDescription:
-      "Reforma e instalación sanitaria de cocinas en Montevideo. Plomería profesional.",
-  },
-  {
-    slug: "sanitaria-general",
-    title: "Sanitaria general",
-    shortTitle: "Sanitaria general",
-    description:
-      "Reparaciones e instalaciones sanitarias para el hogar o comercio en Montevideo.",
-    longDescription:
-      "Atendemos trabajos de sanitaria general: reparaciones, instalaciones y urgencias en horario de atención. Te explicamos el problema, el presupuesto y las opciones antes de intervenir.",
-    image: "/servicio-mantenimiento.jpg",
-    problems: [
-      "Reparaciones sanitarias varias",
-      "Instalaciones nuevas",
-      "Problemas en baño o cocina",
-      "Diagnóstico de fallas",
-    ],
-    seoTitle: "Sanitaria general en Montevideo",
-    seoDescription:
-      "Servicio de sanitaria general en Montevideo. Reparaciones e instalaciones con Sanitario Raul Arrieta.",
-  },
-  {
-    slug: "plomeria",
-    title: "Plomería",
-    shortTitle: "Plomería",
-    description:
-      "Plomería profesional: fugas, cañerías, grifería y mantenimiento en Montevideo.",
-    longDescription:
-      "Servicio de plomería para hogares y comercios: detección y reparación de fugas, cambio de grifería, cañerías y soluciones de mantenimiento con atención personalizada.",
+      "Atendemos trabajos de electricidad: tableros, tomas, iluminación, fallas y mejoras de instalación. Priorizamos seguridad, orden y un resultado confiable.",
     image: "/servicio-calefon.jpg",
     problems: [
-      "Fugas y pérdidas de agua",
-      "Cambio de grifería",
-      "Cañerías dañadas",
-      "Mantenimiento preventivo",
+      "Cortes o fallas en la instalación",
+      "Cambio de tablero o protecciones",
+      "Tomas, luces e interruptores",
+      "Instalaciones eléctricas nuevas",
     ],
-    seoTitle: "Plomería en Montevideo",
+    seoTitle: "Electricidad en Montevideo",
     seoDescription:
-      "Plomería en Montevideo: fugas, cañerías y grifería. Atención personalizada y trabajo responsable.",
+      "Reparaciones e instalaciones eléctricas en Montevideo. Servicio profesional de Reparaciones y servicios López.",
+  },
+  {
+    slug: "albanileria",
+    title: "Albañilería",
+    shortTitle: "Albañilería",
+    description:
+      "Reparaciones, reformas y trabajos de albañilería en Montevideo.",
+    longDescription:
+      "Realizamos trabajos de albañilería para reparar, mejorar o reformar tu hogar: paredes, revoques, pisos, ampliaciones menores y terminaciones.",
+    image: "/servicio-mantenimiento.jpg",
+    problems: [
+      "Paredes y revoques dañados",
+      "Reparaciones de mampostería",
+      "Mejoras y reformas parciales",
+      "Terminaciones y reacondicionamiento",
+    ],
+    seoTitle: "Albañilería en Montevideo",
+    seoDescription:
+      "Albañilería y reformas en Montevideo. Reparaciones y servicios López.",
+  },
+  {
+    slug: "pintura",
+    title: "Pintura",
+    shortTitle: "Pintura",
+    description:
+      "Pintura interior y exterior con terminaciones limpias y duraderas.",
+    longDescription:
+      "Pintamos interiores y exteriores con preparación adecuada de superficies y terminaciones prolijas. Ideal para refrescar tu hogar o cerrar una reforma.",
+    image: "/servicio-fugas.jpg",
+    problems: [
+      "Pintura de habitaciones o locales",
+      "Fachadas y exteriores",
+      "Preparación de paredes",
+      "Terminación luego de una reforma",
+    ],
+    seoTitle: "Pintura en Montevideo",
+    seoDescription:
+      "Servicio de pintura en Montevideo. Interiores, exteriores y terminaciones profesionales.",
+  },
+  {
+    slug: "impermeabilizacion",
+    title: "Impermeabilización",
+    shortTitle: "Impermeabilización",
+    description:
+      "Soluciones contra humedad, filtraciones y filtrado de agua.",
+    longDescription:
+      "Tratamos problemas de humedad e impermeabilización en terrazas, techos, muros y zonas críticas. Buscamos una solución duradera y bien explicada.",
+    image: "/servicio-desobstruccion.jpg",
+    problems: [
+      "Filtraciones en techos o terrazas",
+      "Humedad en paredes",
+      "Impermeabilización preventiva",
+      "Reparación de zonas dañadas por agua",
+    ],
+    seoTitle: "Impermeabilización en Montevideo",
+    seoDescription:
+      "Impermeabilización y tratamiento de humedad en Montevideo. Reparaciones y servicios López.",
+  },
+  {
+    slug: "herreria",
+    title: "Herrería",
+    shortTitle: "Herrería",
+    description:
+      "Trabajos de herrería: reparaciones, estructuras y refuerzos.",
+    longDescription:
+      "Atendemos trabajos de herrería para el hogar o comercio: reparaciones, estructuras, refuerzos y piezas a medida según la necesidad del trabajo.",
+    image: "/servicio-sanitario.jpg",
+    problems: [
+      "Reparación de estructuras metálicas",
+      "Refuerzos y soldaduras",
+      "Trabajos a medida",
+      "Mantenimiento de herrería existente",
+    ],
+    seoTitle: "Herrería en Montevideo",
+    seoDescription:
+      "Herrería y reparaciones metálicas en Montevideo. Reparaciones y servicios López.",
   },
 ];
 
@@ -185,15 +199,15 @@ export const zones = [
 export const faqs = [
   {
     q: "¿Cuál es el horario de atención?",
-    a: "Lunes a viernes de 08:00 a 17:00, sábados de 08:00 a 12:00. Domingos cerrado.",
+    a: "Lunes a viernes de 08:00 a 18:00. Sábados y domingos cerrado.",
   },
   {
-    q: "¿En cuánto tiempo pueden llegar?",
-    a: "Depende de la zona y la demanda del momento. Al llamar te damos un tiempo estimado real según disponibilidad.",
+    q: "¿Qué servicios ofrecen?",
+    a: "Sanitaria, electricidad, albañilería, pintura, impermeabilización y herrería. Un solo equipo para reparaciones, mantenimiento y reformas.",
   },
   {
     q: "¿Dan presupuesto antes de empezar?",
-    a: "Sí. Explicamos el problema, las opciones y el costo antes de intervenir. El presupuesto es sin compromiso.",
+    a: "Sí. Explicamos el trabajo, las opciones y el costo antes de intervenir. El presupuesto es sin compromiso.",
   },
   {
     q: "¿Qué formas de pago aceptan?",
@@ -201,7 +215,7 @@ export const faqs = [
   },
   {
     q: "¿Dónde están ubicados?",
-    a: `Estamos en ${site.address}. Código Plus: ${site.plusCode}. Atendemos en Montevideo.`,
+    a: `Estamos en ${site.address}. Atendemos en Montevideo, Uruguay.`,
   },
 ];
 
@@ -209,43 +223,43 @@ export const reviews = [
   {
     name: "Cliente en Montevideo",
     zone: "Montevideo",
-    text: "Buen trato y solución clara. Trabajo hecho como corresponde.",
+    text: "Resolvieron varios trabajos en casa con el mismo equipo. Muy prácticos.",
   },
   {
     name: "Cliente en Montevideo",
     zone: "Montevideo",
-    text: "Atención personalizada y resultado prolijo. Recomendables.",
+    text: "Presupuesto claro y trabajo prolijo. Volvería a llamarlos.",
   },
   {
     name: "Cliente en Montevideo",
     zone: "Montevideo",
-    text: "Responsables y puntuales. Resolvieron el problema sin vueltas.",
+    text: "Buen trato y responsabilidad. Coordinaron todo sin complicaciones.",
   },
 ];
 
 export const workSteps = [
   {
     title: "Nos contactás",
-    text: "Por teléfono o WhatsApp contanos el problema y tu zona.",
+    text: "Por teléfono o WhatsApp contanos qué necesitás y tu zona.",
   },
   {
-    title: "Coordinamos la visita",
-    text: "Te confirmamos disponibilidad dentro del horario de atención.",
+    title: "Presupuesto",
+    text: "Te explicamos el trabajo y te damos un presupuesto sin compromiso.",
   },
   {
-    title: "Diagnosticamos",
-    text: "Revisamos el problema y te damos un presupuesto claro.",
+    title: "Coordinamos",
+    text: "Agendamos la visita dentro del horario de atención.",
   },
   {
     title: "Resolvemos",
-    text: "Ejecutamos el trabajo, limpiamos y dejamos todo funcionando.",
+    text: "Ejecutamos el trabajo, limpiamos y dejamos todo en orden.",
   },
 ];
 
 export const whyUs = [
   {
-    title: "5,0 en Google",
-    text: "Clientes que confían en nuestro trabajo y nos recomiendan.",
+    title: "Un solo equipo",
+    text: "Varios rubros en un mismo contacto: menos vueltas y más coordinación.",
   },
   {
     title: "Presupuesto transparente",

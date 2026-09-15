@@ -105,7 +105,7 @@ export function Header() {
             className="!rounded-full !px-4 !py-2.5 text-[13px] xl:!px-5 xl:text-[14px]"
           >
             <Icons name="whatsapp" className="h-4 w-4" />
-            Solicitar servicio
+            {site.ctaService}
           </ButtonLink>
         </div>
 

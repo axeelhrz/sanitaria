@@ -4,8 +4,8 @@ import { Reveal } from "./Reveal";
 import { site, telUrl, whatsappUrl } from "@/lib/site";
 
 export function FinalCTA({
-  title = "¿Necesitás un sanitario?",
-  text = "Solicitá el servicio por WhatsApp o llamá y coordinamos la visita. Atención personalizada en Montevideo.",
+  title = "¿Necesitás una reparación o reforma?",
+  text = "Pedí tu presupuesto por WhatsApp o llamá y coordinamos la visita. Reparaciones y mantenimiento integral en Montevideo.",
 }: {
   title?: string;
   text?: string;

@@ -29,7 +29,7 @@ export function Footer() {
               className="inline-flex items-center gap-2 rounded-full bg-[#1f9e57] px-4 py-2 text-sm font-semibold hover:bg-[#188a4a]"
             >
               <Icons name="whatsapp" className="h-4 w-4" />
-              Solicitar servicio
+              {site.ctaService}
             </a>
           </div>
         </div>
@@ -59,7 +59,6 @@ export function Footer() {
           <ul className="mt-4 space-y-3 text-sm text-white/80">
             <li>{site.hours}</li>
             <li>{site.address}</li>
-            <li>{site.plusCode}</li>
             <li>
               <a href={telUrl()} className="hover:text-white">
                 {site.phoneDisplay}
@@ -75,9 +74,7 @@ export function Footer() {
             © {new Date().getFullYear()} {site.name}. Todos los derechos
             reservados.
           </p>
-          <p>
-            ★★★★★ {site.ratingLabel} · {site.reviewCount} opiniones
-          </p>
+          <p>Montevideo, Uruguay</p>
         </div>
       </div>
     </footer>

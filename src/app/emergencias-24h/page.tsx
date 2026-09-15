@@ -5,8 +5,8 @@ import { Icons } from "@/components/Icons";
 import { site, telUrl, whatsappUrl, zones } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Urgencias sanitarias en Montevideo",
-  description: `¿Tenés una urgencia sanitaria? Contactá a ${site.name}. ${site.hours}.`,
+  title: "Urgencias y reparaciones en Montevideo",
+  description: `¿Tenés una reparación urgente? Contactá a ${site.name}. ${site.hours}.`,
 };
 
 export default function EmergenciasPage() {
@@ -16,15 +16,15 @@ export default function EmergenciasPage() {
         <div className="container-page py-16 md:py-20">
           <p className="section-label !text-white/60">Urgencias</p>
           <h1 className="text-display mt-3 max-w-3xl">
-            ¿Tenés una urgencia sanitaria? Coordinamos la visita.
+            ¿Tenés una reparación urgente? Coordinamos la visita.
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-white/75">
-            Baño inundado, caño roto o cloaca tapada: llamá o escribinos y
-            coordinamos dentro del horario de atención.
+            Pérdida de agua, falla eléctrica, humedad o un daño en el hogar:
+            llamá o escribinos y coordinamos dentro del horario de atención.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
             <ButtonLink
-              href={whatsappUrl("Hola, tengo una urgencia sanitaria.")}
+              href={whatsappUrl("Hola, tengo una reparación urgente.")}
               variant="whatsapp"
               className="!px-8 !py-5 !text-xl"
             >
@@ -50,16 +50,16 @@ export default function EmergenciasPage() {
             <div>
               <p className="section-label">Problemas frecuentes</p>
               <h2 className="mt-3 text-3xl font-bold text-navy">
-                Casos que atendemos de urgencia
+                Casos que atendemos con prioridad
               </h2>
               <ul className="mt-6 grid gap-3">
                 {[
                   "Pérdida de agua o cañería rota",
-                  "Inodoro, pileta o cloaca tapada",
-                  "Inundación en baño o cocina",
-                  "Calefón sin agua caliente",
-                  "Cisterna que no corta y desperdicia agua",
-                  "Rotura de grifería con pérdida fuerte",
+                  "Falla eléctrica o corto en el hogar",
+                  "Humedad o filtraciones",
+                  "Daños que requieren albañilería rápida",
+                  "Reparaciones varias en el hogar",
+                  "Situaciones que no pueden esperar al fin de semana",
                 ].map((item) => (
                   <li
                     key={item}
@@ -89,12 +89,12 @@ export default function EmergenciasPage() {
                     d: "Te damos un tiempo estimado real según zona y disponibilidad.",
                   },
                   {
-                    t: "Diagnosticamos en el lugar",
-                    d: "Explicamos el problema, opciones y presupuesto antes de intervenir.",
+                    t: "Presupuesto claro",
+                    d: "Explicamos el problema, opciones y costo antes de intervenir.",
                   },
                   {
-                    t: "Resolvemos y garantizamos",
-                    d: "Arreglamos, limpiamos y dejamos el servicio funcionando.",
+                    t: "Resolvemos",
+                    d: "Ejecutamos el trabajo, limpiamos y dejamos todo en orden.",
                   },
                 ].map((step, i) => (
                   <li key={step.t} className="rounded-2xl border border-line p-5">

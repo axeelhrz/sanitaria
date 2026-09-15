@@ -27,11 +27,11 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: `${site.name} | Fontanero y sanitario en Montevideo`,
+    default: `${site.name} | Reparaciones y reformas en Montevideo`,
     template: `%s | ${site.name}`,
   },
   description: site.description,
-  metadataBase: new URL("https://sanitarioraularrieta.com"),
+  metadataBase: new URL("https://reparacioneslopez.com"),
   openGraph: {
     title: site.name,
     description: site.tagline,

@@ -1,15 +1,14 @@
-# Sanitario Raul Arrieta
+# Reparaciones y servicios López
 
-Sitio web de fontanero / sanitario en Montevideo.
+Sitio web de reparaciones, mantenimiento y reformas en Montevideo.
 
 ## Datos de contacto
 
-- **Marca:** Sanitario Raul Arrieta
-- **Teléfono / WhatsApp:** 095 297 686
-- **Dirección:** Agrigento 2320, 11500 Montevideo
-- **Plus Code:** 4WF8+J5 Montevideo
-- **Horario:** Lun–Vie 08:00–17:00 · Sáb 08:00–12:00 · Dom cerrado
-- **Google:** ★★★★★ 5,0 · 5 opiniones
+- **Marca:** Reparaciones y servicios López
+- **Teléfono / WhatsApp:** 099 493 321
+- **Dirección:** Flammarión 5046, 11400 Montevideo
+- **Horario:** Lunes a viernes, 08:00–18:00
+- **Servicios:** Sanitaria · Electricidad · Albañilería · Pintura · Impermeabilización · Herrería
 
 ## Desarrollo
 
